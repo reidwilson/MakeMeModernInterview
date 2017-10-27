@@ -11,7 +11,7 @@ for link in soup.find_all('a'):
     Test1 = 'http://'
     Test2 = 'https://'
     myLink = link.get('href')
-    if Test1 not in foo and Test2 not in foo:
-        foo = Test1 + 'www.bbc.com' + myLink
+    if Test1 not in myLink and Test2 not in myLink:
+        myLink = Test1 + 'www.bbc.com' + myLink
     ostream.write(myLink + '\n')
 ostream.close()

@@ -8,18 +8,18 @@ driver.quit()
 ostream = open('foo.txt', 'w')
 soup = BeautifulSoup(html, "html.parser")
 #print(soup.prettify()[:])
-letters = soup.select(".storylink")#works
+letters = soup.select(".storylink")
 foo = 0
-zee = []
+wordList = []
 while foo != 30:
-    zee.append(str(letters[foo].text))
-    print(zee[foo])
+    wordList.append(str(letters[foo].text))
+    print(wordList[foo])
     foo = foo + 1
 #avgList = []
 totalAvg = 0.0
 foo = 0
 while foo != 30:
-    mySplit = zee[foo].split()
+    mySplit = wordList[foo].split()
     myCalc = sum(len(cur) for cur in mySplit) / len(mySplit)
     totalAvg = totalAvg + myCalc
     foo = foo+1

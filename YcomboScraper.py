@@ -26,4 +26,4 @@ while count != lettersLen:
     count += 1
 
 totalAvg = totalAvg/lettersLen
-print('\nThe total average word length is', totalAvg)
+print('\nThe average word length is', totalAvg)

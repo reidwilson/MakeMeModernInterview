@@ -8,22 +8,22 @@ driver.quit()
 soup = BeautifulSoup(html, "html.parser")
 tags = soup.select(".storylink")
 count = 0
-wordList = []
+tagList = []
 tagsLen = len(tags)
 
 while count != tagsLen:
-    wordList.append(str(tags[count].text))
-    print(wordList[count])
+    tagList.append(str(tags[count].text))
+    print(tagList[count])
     count += 1
 
 totalAvg = 0.0
 count = 0
 
 while count != tagsLen:
-    mySplit = wordList[count].split()
+    mySplit = tagList[count].split()
     myCalc = sum(len(cur) for cur in mySplit) / len(mySplit)
     totalAvg = totalAvg + myCalc
     count += 1
 
-totalAvg = totalAvg/tagsLen
+totalAvg = totalAvg / tagsLen
 print('\nThe average word length is', totalAvg)
